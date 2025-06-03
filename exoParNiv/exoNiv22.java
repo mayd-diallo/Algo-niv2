@@ -21,12 +21,12 @@ public class exoNiv22 {
             System.out.println("\nCombien ça coûte ? :");
             double prixArticle = scanner.nextDouble();
             prix.add(prixArticle);
-            scanner.nextLine(); // Pour consommer le retour à la ligne
+            scanner.nextLine(); 
             
             // Demande si l'utilisateur veut continuer
             System.out.println("\nVoulez-vous acheter autre chose (true/false)?");
             continuer = scanner.nextBoolean();
-            scanner.nextLine(); // Pour consommer le retour à la ligne
+            scanner.nextLine(); 
             
             if (continuer) {
                 System.out.println("\nQue voulez-vous acheter ? :");
