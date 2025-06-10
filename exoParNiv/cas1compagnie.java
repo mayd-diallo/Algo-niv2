@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import jalon2.Vol;
+
 public class cas1compagnie {
     private static final String ADMIN_USERNAME = "AIRMESS_ADMIN";
     private static final String ADMIN_PASSWORD = "Avengers123!";
