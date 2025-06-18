@@ -1,12 +1,32 @@
+/*Vous êtes l’agence « Les Avengers du Dev », vous avez un client qui aimerait avoir pour son site de réservation d’avion, un outil lui permettant de lister tous ses vols avec les informations demandées. Voici sa demande pour plus d’informations
+
+Demande du client :
+
+Bonjour les Avengers,
+Nous sommes la compagnie aérienne AIRMESS, et nous aimerions disposer d’un outil qui nous permette de lister nous-mêmes nos propres vols avec les informations suivantes :
+
+•	Départ : Ville / Pays
+•	Arrivée : Ville / Pays
+•	Date et heure de départ : heures et minutes. Si la date de départ du vol est très proche d’aujourd’hui (moins d’une semaine), le prix devra automatiquement augmenter de 40 %. En revanche, si la date du vol est très éloignée (plus de 6 mois avant la date de départ), le prix devra diminuer de 40 %.
+•	Durée du vol : heures et minutes
+•	Date et heure d’arrivée : calculées automatiquement à partir de la durée du vol.
+•	Nombre de places : minimum 80 places, maximum 200 places. Si le nombre de places est égal ou supérieur à 150, une réduction de 10 % sera appliquée sur le prix initial. Si le nombre de places est inférieur à 100, le prix augmentera de 10 %.
+•	Prix initial du vol : défini à la création du vol et ajusté automatiquement en fonction de la date de départ et du nombre de places, comme décrit précédemment.
+
+Une fois les informations saisies, j’aimerais que tous les vols soient affichés. Nous devrions pouvoir créer autant de vols que nécessaire.
+Enfin, nous aimerions surtout avoir un système d’authentification pour accéder à cette application. Vous nous fournirez le login et le mot de passe.
+
+ */
+
+
 import java.time.LocalDateTime;
-import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 import jalon2.Vol;
 
-public class cas1compagnie {
+public class volcompagnie {
     private static final String ADMIN_USERNAME = "AIRMESS_ADMIN";
     private static final String ADMIN_PASSWORD = "Avengers123!";
     private static List<Vol> vols = new ArrayList<>();
@@ -58,7 +78,7 @@ public class cas1compagnie {
     }
 
     private static void ajouterVol() {
-        System.out.println("\n=== AJOUTER UN NOUVEAU VOL ===");
+        System.out.println("\nAJOUTER UN NOUVEAU VOL");
 
         System.out.print("Ville de départ: ");
         String villeDepart = scanner.nextLine();
@@ -112,7 +132,7 @@ public class cas1compagnie {
         } else {
             for (Vol vol : vols) {
                 System.out.println(vol);
-                System.out.println("----------------------------------");
+                System.out.println(); 
             }
         }
     }
